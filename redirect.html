@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection</title>
+  <script>
+    const redirections = {
+      "tag1": "https://www.flens.de/",
+      "tag2": "https://ethery3.wixsite.com/ag-stard-2023",
+      "tag3": "https://ethery3.wixsite.com/ag-stard-2023",
+      "tag4": "https://ethery3.wixsite.com/ag-stard-2023",
+      "tag5": "https://ethery3.wixsite.com/ag-stard-2023",
+      "tag6": "https://ethery3.wixsite.com/ag-stard-2023",
+      "tag7": "https://ethery3.wixsite.com/ag-stard-2023",
+      // Ajoutez d'autres redirections ici
+    };
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const tag = urlParams.get('id');
+
+    if (redirections.hasOwnProperty(tag)) {
+      window.location.replace(redirections[tag]);
+    } else {
+      document.write("L'identifiant de tag est invalide.");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
